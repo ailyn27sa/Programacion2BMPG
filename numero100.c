@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int i;
+
+    printf("los numeros del 1 al 100 enter0s son");
+    for (i = 1; i <= 100; i++) {
+        
+        printf("%d\n", i);
+    }
+
+    return 0;
+}
