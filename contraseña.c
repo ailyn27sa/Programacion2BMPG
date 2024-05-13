@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 
+
+float calcularImporte(int cantidad, float precioUnitario) {
+    return cantidad * precioUnitario;
+}
+
 int main() {
     char nombre[50];
     char contrasena[50];
@@ -9,7 +14,7 @@ int main() {
     float precioUnitario;
     float importeTotal = 0;
 
-   
+    
     do {
         printf("Introduce tu nombre: ");
         scanf("%s", nombre);
@@ -31,12 +36,11 @@ int main() {
         }
     } while (intentos > 0);
 
-  
+   
     printf("\nAhora vamos a calcular el importe de la factura.\n");
     printf("Por favor introduce la cantidad y el precio unitario de cada artículo.\n");
     printf("Cuando hayas terminado, introduce 0 en la cantidad para finalizar.\n\n");
 
-   
     printf("Cantidad: ");
     scanf("%d", &cantidad);
     while (cantidad != 0) {
@@ -46,7 +50,7 @@ int main() {
         if (cantidad < 0 || precioUnitario < 0) {
             printf("Error: la cantidad y el precio deben ser números positivos.\n\n");
         } else {
-            float importe = cantidad * precioUnitario;
+            float importe = calcularImporte(cantidad, precioUnitario);
             importeTotal += importe;
         }
 
@@ -54,9 +58,6 @@ int main() {
         scanf("%d", &cantidad);
     }
     
-
-    
-
     printf("\nImporte total de la factura: %.2f\n", importeTotal);
 
     return 0;
