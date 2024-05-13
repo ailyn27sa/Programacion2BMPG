@@ -13,7 +13,7 @@ int main() {
         printf("Introduce tu contraseña: ");
         scanf("%s", contrasena);
 
-        if (strcmp(nombre, "root") == 0 && strcmp(contrasena, "1234") == 0) {
+        if (strcmp(nombre, "Ailyn") == 0 && strcmp(contrasena, "2B42") == 0) {
             printf("Bienvenido al sistema.\n");
             break;
         } else {
